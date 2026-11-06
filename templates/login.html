@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Logga in</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="box">
+        <h1>🐑 Fårskallarnas forum</h1>
+
+        {% if fel %}
+            <p class="fel">{{ fel }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="username" placeholder="Användarnamn" required>
+            <input type="password" name="password" placeholder="Lösenord" required>
+            <button type="submit">Logga in</button>
+        </form>
+    </div>
+</body>
+</html>
